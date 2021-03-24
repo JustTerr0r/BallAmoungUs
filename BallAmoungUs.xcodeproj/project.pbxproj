@@ -30,7 +30,7 @@
 		3046AF7C25BC32F700D9E97E /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
 		3046AF7F25BC332F00D9E97E /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		309AEA9D25F92914003F4AE2 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
-		30AD43CA2552D2C400DAB490 /* NBAPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30AD43CA2552D2C400DAB490 /* BallAmoungUs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BallAmoungUs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AD43CD2552D2C400DAB490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30AD43CF2552D2C400DAB490 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		30AD43D42552D2C400DAB490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		30AD43CB2552D2C400DAB490 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				30AD43CA2552D2C400DAB490 /* NBAPlayers.app */,
+				30AD43CA2552D2C400DAB490 /* BallAmoungUs.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,20 +85,13 @@
 			children = (
 				30AD43CD2552D2C400DAB490 /* AppDelegate.swift */,
 				30AD43CF2552D2C400DAB490 /* SceneDelegate.swift */,
-				309AEA9D25F92914003F4AE2 /* ApiClient.swift */,
-				30AD43E92552D88100DAB490 /* Player.swift */,
-				8FEC3FC525FC98E7009C7B23 /* Games.swift */,
-				3046AF7F25BC332F00D9E97E /* Team.swift */,
-				30AD43E62552D6A700DAB490 /* PlayerDetailsViewController.swift */,
-				30AD43E32552D39600DAB490 /* PlayersViewController.swift */,
-				8FEC3FBE25FBA3E2009C7B23 /* GamesTableViewController.swift */,
-				8FEC3FC125FBA787009C7B23 /* GamesTableViewCell.swift */,
+				8FBFCC7C260B44DF00803BD2 /* Views */,
+				8FBFCC79260B43D200803BD2 /* Controllers */,
+				8FBFCC7D260B450600803BD2 /* Client */,
+				8FBFCC78260B43BF00803BD2 /* Models */,
 				30AD43D32552D2C400DAB490 /* Main.storyboard */,
-				3046AF7C25BC32F700D9E97E /* TeamDetailsViewController.swift */,
-				8FE1186E2601CEA50010CAD4 /* TeamsCollectionViewController.swift */,
-				8FE118712601D2A60010CAD4 /* TeamsCollectionViewCell.swift */,
-				30AD43D62552D2C700DAB490 /* Assets.xcassets */,
 				30AD43D82552D2C700DAB490 /* LaunchScreen.storyboard */,
+				30AD43D62552D2C700DAB490 /* Assets.xcassets */,
 				30AD43DB2552D2C700DAB490 /* Info.plist */,
 			);
 			path = NBAPlayers;
@@ -121,12 +114,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8FBFCC78260B43BF00803BD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8FEC3FC525FC98E7009C7B23 /* Games.swift */,
+				3046AF7F25BC332F00D9E97E /* Team.swift */,
+				30AD43E92552D88100DAB490 /* Player.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8FBFCC79260B43D200803BD2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				30AD43E32552D39600DAB490 /* PlayersViewController.swift */,
+				8FE1186E2601CEA50010CAD4 /* TeamsCollectionViewController.swift */,
+				3046AF7C25BC32F700D9E97E /* TeamDetailsViewController.swift */,
+				30AD43E62552D6A700DAB490 /* PlayerDetailsViewController.swift */,
+				8FEC3FBE25FBA3E2009C7B23 /* GamesTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8FBFCC7C260B44DF00803BD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8FEC3FC125FBA787009C7B23 /* GamesTableViewCell.swift */,
+				8FE118712601D2A60010CAD4 /* TeamsCollectionViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8FBFCC7D260B450600803BD2 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				309AEA9D25F92914003F4AE2 /* ApiClient.swift */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		30AD43C92552D2C400DAB490 /* NBAPlayers */ = {
+		30AD43C92552D2C400DAB490 /* BallAmoungUs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30AD43DE2552D2C700DAB490 /* Build configuration list for PBXNativeTarget "NBAPlayers" */;
+			buildConfigurationList = 30AD43DE2552D2C700DAB490 /* Build configuration list for PBXNativeTarget "BallAmoungUs" */;
 			buildPhases = (
 				4F3009A73691ABA77D435F83 /* [CP] Check Pods Manifest.lock */,
 				30AD43C62552D2C400DAB490 /* Sources */,
@@ -138,9 +170,9 @@
 			);
 			dependencies = (
 			);
-			name = NBAPlayers;
+			name = BallAmoungUs;
 			productName = NBAPlayers;
-			productReference = 30AD43CA2552D2C400DAB490 /* NBAPlayers.app */;
+			productReference = 30AD43CA2552D2C400DAB490 /* BallAmoungUs.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -157,7 +189,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 30AD43C52552D2C400DAB490 /* Build configuration list for PBXProject "NBAPlayers" */;
+			buildConfigurationList = 30AD43C52552D2C400DAB490 /* Build configuration list for PBXProject "BallAmoungUs" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -170,7 +202,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				30AD43C92552D2C400DAB490 /* NBAPlayers */,
+				30AD43C92552D2C400DAB490 /* BallAmoungUs */,
 			);
 		};
 /* End PBXProject section */
@@ -432,7 +464,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		30AD43C52552D2C400DAB490 /* Build configuration list for PBXProject "NBAPlayers" */ = {
+		30AD43C52552D2C400DAB490 /* Build configuration list for PBXProject "BallAmoungUs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30AD43DC2552D2C700DAB490 /* Debug */,
@@ -441,7 +473,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30AD43DE2552D2C700DAB490 /* Build configuration list for PBXNativeTarget "NBAPlayers" */ = {
+		30AD43DE2552D2C700DAB490 /* Build configuration list for PBXNativeTarget "BallAmoungUs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30AD43DF2552D2C700DAB490 /* Debug */,
