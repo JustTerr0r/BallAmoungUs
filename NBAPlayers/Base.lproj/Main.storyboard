@@ -48,7 +48,7 @@
         <!--Players-->
         <scene sceneID="Sea-Zk-AaB">
             <objects>
-                <viewController storyboardIdentifier="PlayersViewController" id="Y3v-X8-4Pi" customClass="PlayersViewController" customModule="NBAPlayers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayersViewController" id="Y3v-X8-4Pi" customClass="PlayersViewController" customModule="BallAmoungUs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zhH-Ns-Xjf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,7 +134,7 @@
         <!--Player Details View Controller-->
         <scene sceneID="YG1-y3-kEv">
             <objects>
-                <viewController storyboardIdentifier="PlayerDetailsViewController" id="JCE-aZ-mvY" customClass="PlayerDetailsViewController" customModule="NBAPlayers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerDetailsViewController" id="JCE-aZ-mvY" customClass="PlayerDetailsViewController" customModule="BallAmoungUs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EgI-5U-3h7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,7 +192,7 @@
         <!--Team Details View Controller-->
         <scene sceneID="TBD-mn-JLb">
             <objects>
-                <viewController storyboardIdentifier="TeamDetailsViewController" id="l9j-Di-VEj" customClass="TeamDetailsViewController" customModule="NBAPlayers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeamDetailsViewController" id="l9j-Di-VEj" customClass="TeamDetailsViewController" customModule="BallAmoungUs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AX7-ay-vcK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,7 +228,7 @@
                                 <rect key="frame" x="0.0" y="513" width="414" height="349"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" rowHeight="73" id="ByM-D5-M08" customClass="GamesTableViewCell" customModule="NBAPlayers" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" rowHeight="73" id="ByM-D5-M08" customClass="GamesTableViewCell" customModule="BallAmoungUs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ByM-D5-M08" id="pUx-cP-O6v">
@@ -292,6 +292,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last games:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUU-eo-Kuh">
+                                <rect key="frame" x="302" y="490" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2rT-L6-BSy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -299,6 +305,7 @@
                             <constraint firstItem="h0L-ew-7Ro" firstAttribute="leading" secondItem="2rT-L6-BSy" secondAttribute="leading" constant="16" id="Kfd-0g-xsQ"/>
                             <constraint firstItem="h0L-ew-7Ro" firstAttribute="top" secondItem="2rT-L6-BSy" secondAttribute="top" constant="16" id="PLB-Cg-yOm"/>
                             <constraint firstItem="luk-BB-t9Q" firstAttribute="top" secondItem="2rT-L6-BSy" secondAttribute="top" constant="128.5" id="POs-63-G53"/>
+                            <constraint firstItem="dFO-qy-dF8" firstAttribute="top" secondItem="RUU-eo-Kuh" secondAttribute="bottom" constant="2" id="TN1-HM-fOF"/>
                             <constraint firstItem="A5X-Lb-r0M" firstAttribute="top" secondItem="2rT-L6-BSy" secondAttribute="top" constant="56" id="Ueb-t9-FOB"/>
                             <constraint firstItem="2rT-L6-BSy" firstAttribute="trailing" secondItem="luk-BB-t9Q" secondAttribute="trailing" constant="57" id="VKF-Hh-bwl"/>
                             <constraint firstItem="1A1-39-wp0" firstAttribute="top" secondItem="2rT-L6-BSy" secondAttribute="top" constant="13" id="aUO-uk-9Bx"/>
@@ -307,6 +314,7 @@
                             <constraint firstItem="luk-BB-t9Q" firstAttribute="leading" secondItem="2rT-L6-BSy" secondAttribute="leading" constant="57" id="hMZ-dr-vAm"/>
                             <constraint firstItem="h0Z-9P-F4h" firstAttribute="top" secondItem="h0L-ew-7Ro" secondAttribute="bottom" constant="16" id="jts-Gf-cka"/>
                             <constraint firstItem="dFO-qy-dF8" firstAttribute="leading" secondItem="2rT-L6-BSy" secondAttribute="leading" id="lun-bV-WYH"/>
+                            <constraint firstItem="2rT-L6-BSy" firstAttribute="trailing" secondItem="RUU-eo-Kuh" secondAttribute="trailing" constant="19" id="mOt-wK-Rt3"/>
                             <constraint firstItem="2rT-L6-BSy" firstAttribute="bottom" secondItem="luk-BB-t9Q" secondAttribute="bottom" constant="396" id="mpa-7G-xdv"/>
                             <constraint firstItem="A5X-Lb-r0M" firstAttribute="leading" secondItem="2rT-L6-BSy" secondAttribute="leading" constant="16" id="seM-6J-KOf"/>
                             <constraint firstItem="dFO-qy-dF8" firstAttribute="bottom" secondItem="2rT-L6-BSy" secondAttribute="bottom" id="xBZ-ez-gdt"/>
@@ -348,7 +356,7 @@
         <!--Teams-->
         <scene sceneID="hmL-B1-QiY">
             <objects>
-                <collectionViewController id="2wg-CR-dHq" customClass="TeamsCollectionViewController" customModule="NBAPlayers" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="2wg-CR-dHq" customClass="TeamsCollectionViewController" customModule="BallAmoungUs" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="nVM-Mk-Rbl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -360,7 +368,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="teamCell" id="t6k-al-JtC" customClass="TeamsCollectionViewCell" customModule="NBAPlayers" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="teamCell" id="t6k-al-JtC" customClass="TeamsCollectionViewCell" customModule="BallAmoungUs" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9uA-my-Sbe">
@@ -397,13 +405,13 @@
         <!--Games Table View Controller-->
         <scene sceneID="MPK-3l-uiZ">
             <objects>
-                <tableViewController id="tgW-JA-rtM" customClass="GamesTableViewController" customModule="NBAPlayers" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="tgW-JA-rtM" customClass="GamesTableViewController" customModule="BallAmoungUs" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SUz-P9-mdr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" rowHeight="73" id="JbM-0h-GnF" customClass="GamesTableViewCell" customModule="NBAPlayers" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" rowHeight="73" id="JbM-0h-GnF" customClass="GamesTableViewCell" customModule="BallAmoungUs" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JbM-0h-GnF" id="xkj-Gl-USa">

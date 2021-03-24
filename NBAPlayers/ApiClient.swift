@@ -22,7 +22,7 @@ class ApiClientImpl: ApiClient {
     func getOpps(idOpp: Int, completion: @escaping (Result<[Game], Error>) -> Void) {
         let session = URLSession.shared
         
-        guard let url = URL(string: "https://www.balldontlie.io/api/v1/games?seasons[]=2020&team_ids[]=1") else { return }
+        guard let url = URL(string: "https://www.balldontlie.io/api/v1/games?seasons[]=2020&per_page[]=6&team_ids[]=\(idOpp)") else { return }
         let urlRequest = URLRequest(url: url)
         let dataTask = session.dataTask(with: urlRequest, completionHandler: { data, response, error in
 

@@ -85,12 +85,12 @@
 			children = (
 				30AD43CD2552D2C400DAB490 /* AppDelegate.swift */,
 				30AD43CF2552D2C400DAB490 /* SceneDelegate.swift */,
-				8FBFCC7C260B44DF00803BD2 /* Views */,
-				8FBFCC79260B43D200803BD2 /* Controllers */,
 				8FBFCC7D260B450600803BD2 /* Client */,
+				8FBFCC79260B43D200803BD2 /* Controllers */,
 				8FBFCC78260B43BF00803BD2 /* Models */,
-				30AD43D32552D2C400DAB490 /* Main.storyboard */,
+				8FBFCC7C260B44DF00803BD2 /* Views */,
 				30AD43D82552D2C700DAB490 /* LaunchScreen.storyboard */,
+				30AD43D32552D2C400DAB490 /* Main.storyboard */,
 				30AD43D62552D2C700DAB490 /* Assets.xcassets */,
 				30AD43DB2552D2C700DAB490 /* Info.plist */,
 			);

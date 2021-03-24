@@ -1,7 +1,7 @@
 
 import UIKit
 
-class TeamDetailsViewController: UIViewController {
+class TeamDetailsViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var conferenceLabel: UILabel!
@@ -22,8 +22,12 @@ class TeamDetailsViewController: UIViewController {
         conferenceLabel.text = team?.conference
         abbreviationLabel.text = team?.abbreviation
         teamLogo.image = UIImage(named: "\(team?.name ?? "nba")")
+        lastGameTable.register(GamesTableViewCell.self, forCellReuseIdentifier: "gameCekk")
         reloadGameData()
     print(teamId)
+        lastGameTable.dataSource = self
+        lastGameTable.rowHeight = 75
+        
     }
 
     func reloadGameData() {
@@ -33,8 +37,7 @@ class TeamDetailsViewController: UIViewController {
                 switch result {
                 case .success(let games):
                     self.opps = games
-                    print("https://www.balldontlie.io/api/v1/games?team_ids=\(teamId)")
-                    print("API DONE")
+                    print(self.opps.count)
                 case .failure:
                     self.opps = []
                     print("FAIL API")
@@ -44,6 +47,7 @@ class TeamDetailsViewController: UIViewController {
         })
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return opps.count
     }
@@ -51,6 +55,7 @@ class TeamDetailsViewController: UIViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as! GamesTableViewCell
         let game = opps[indexPath.row]
+        
         
         cell.team1Name.text = game.homeTeam.abbreviation
         cell.team1Logo.image = UIImage(named: "\(game.homeTeam.name)")
