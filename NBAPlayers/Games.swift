@@ -14,11 +14,12 @@ struct Game: Decodable {
     let dateGet: String
     var date: String {
         String(dateGet.split(separator: "T")[0])
-    }
-        let homeTeam: Team
-        let homeTeamScore: Int
-        let visitorTeam: Team
-        let visitorTeamScore: Int
+        }
+    
+    let homeTeam: Team
+    let homeTeamScore: Int
+    let visitorTeam: Team
+    let visitorTeamScore: Int
     
     enum CodingKeys: String, CodingKey {
             case dateGet = "date"

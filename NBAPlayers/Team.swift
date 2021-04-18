@@ -1,10 +1,3 @@
-//
-//  Team.swift
-//  NBAPlayers
-//
-//  Created by Stanislav Frolov on 23.01.2021.
-//
-
 import Foundation
 
 struct TeamsResponse: Decodable {
@@ -21,6 +14,7 @@ struct Team: Decodable {
     var fullName: String {
         city + " " + name
     }
+    
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case city = "city"

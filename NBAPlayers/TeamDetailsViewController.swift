@@ -16,20 +16,20 @@ class TeamDetailsViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        let teamId: Int = team?.id ?? 0
         navigationItem.title = team?.name
+        setTeamData()
+        reloadGameData()
+    }
+
+    func setTeamData() {
         cityLabel.text = team?.city
         conferenceLabel.text = team?.conference
         abbreviationLabel.text = team?.abbreviation
         teamLogo.image = UIImage(named: "\(team?.name ?? "nba")")
-        lastGameTable.register(GamesTableViewCell.self, forCellReuseIdentifier: "gameCekk")
-        reloadGameData()
-    print(teamId)
         lastGameTable.dataSource = self
         lastGameTable.rowHeight = 75
-        
     }
-
+    
     func reloadGameData() {
         let teamId = team?.id ?? 0
         gamesApiClient.getOpps(idOpp: teamId, completion: { result in
@@ -37,7 +37,6 @@ class TeamDetailsViewController: UIViewController, UITableViewDataSource {
                 switch result {
                 case .success(let games):
                     self.opps = games
-                    print(self.opps.count)
                 case .failure:
                     self.opps = []
                     print("FAIL API")
@@ -47,7 +46,7 @@ class TeamDetailsViewController: UIViewController, UITableViewDataSource {
         })
     }
     
-    
+    // Last Games table core
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return opps.count
     }

@@ -11,7 +11,6 @@ class GamesTableViewController: UITableViewController {
     
     var games: [Game] = []
     let gamesApiClient: ApiClient = ApiClientImpl()
-    var team: Team?
     
     func reloadGameData() {
         gamesApiClient.getGames(completion: { result in
@@ -52,5 +51,4 @@ class GamesTableViewController: UITableViewController {
         
         return cell
     }
-
 }

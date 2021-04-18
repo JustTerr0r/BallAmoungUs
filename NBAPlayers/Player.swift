@@ -1,10 +1,3 @@
-//
-//  Player.swift
-//  NBAPlayers
-//
-//  Created by Aleksandr Anosov on 04.11.2020.
-//
-
 import Foundation
 
 struct PlayersResponse: Decodable {
@@ -42,9 +35,3 @@ struct Player: Decodable {
         case heightInches = "height_inches"
     }
 }
-
-//Команда: Город, Название команды, Конференция
-
-//Los Angeles Lakers: Los Angeles, Lakers, West
-
-//Miami Heat: Miami, Heat, East

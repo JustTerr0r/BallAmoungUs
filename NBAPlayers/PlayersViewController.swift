@@ -62,6 +62,7 @@ class PlayersViewController: UIViewController, UITableViewDelegate, UITableViewD
         reloadData()
     }
 
+    // Players table core
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count
     }
